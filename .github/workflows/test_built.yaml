@@ -20,7 +20,7 @@ jobs:
       
       - name: Send Email si test fail
         
-        uses: ksatriow/action-mailer@v1
+        uses: ksatriow/action-mailer@latest
         with:
           smtp-server: ${{vars.SMTP_SERVER}}
           smtp-port: ${{vars.SMTP_PORT}}
