@@ -16,8 +16,7 @@ jobs:
         run: npm ci
       - name: lancement des tests unitaires
         run: npm run test
-      - name: mailer test
-        uses: dawidd6/action-send-mail@<REF>
+      
 
       - name: Send Email si test fail
         
