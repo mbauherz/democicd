@@ -16,5 +16,9 @@ jobs:
         run: npm ci
       - name: lancement des tests unitaires
         run: npm run test
+      - name: build du code ts vers le js
+        run: npm run build
+      - name: chech resultat du build
+        run: npm run start
 
     
