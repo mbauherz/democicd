@@ -16,6 +16,23 @@ jobs:
         run: npm ci
       - name: lancement des tests unitaires
         run: npm run test
+      - name: mailer test
+        uses: dawidd6/action-send-mail@<REF>
+
+      - name: Send Email si test fail
+        if: failure()
+        uses: ksatriow/action-mailer@v1
+        with:
+          smtp-server: ${{vars.SMTP_SERVER}}
+          smtp-port: ${{vars.SMTP_PORT}}
+          from-email: ${{ secrets.FROM_EMAIL }}
+          to-email: digitalcity@yopmail.com
+          username: bestusername
+          password: bestpwd
+          subject: "🚀 Deployment fail"
+          body: "oopsie"
+
+
       - name: build du code ts vers le js
         run: npm run build
       - name: chech resultat du build
