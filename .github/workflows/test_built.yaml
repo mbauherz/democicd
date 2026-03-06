@@ -20,8 +20,8 @@ jobs:
         uses: dawidd6/action-send-mail@<REF>
 
       - name: Send Email si test fail
-        if: failure()
-        uses: ksatriow/action-mailer@v1
+        
+        uses: ksatriow/action-mailer@v1.0.0
         with:
           smtp-server: ${{vars.SMTP_SERVER}}
           smtp-port: ${{vars.SMTP_PORT}}
