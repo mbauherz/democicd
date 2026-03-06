@@ -25,10 +25,10 @@ jobs:
         with:
           smtp-server: ${{vars.SMTP_SERVER}}
           smtp-port: ${{vars.SMTP_PORT}}
-          from-email: "bestemail@mail.com"
+          from-email: ${{ secrets.FROM_EMAIL }}
           to-email: "digitalcity@yopmail.com"
-          username: "bestusername"
-          password: "bestpwd"
+          username: ${{secrets.SMTP_USERNAME}}
+          password: ${{secrets.SMTP_PASSWORD}}
           subject: "🚀 Deployment fail"
           body: "oopsie"
 
