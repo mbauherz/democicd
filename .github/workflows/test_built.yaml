@@ -17,10 +17,10 @@ jobs:
       - name: lancement des tests unitaires
         run: npm run test
       
-
+      
       - name: Send Email si test fail
         
-        uses: ksatriow/action-mailer@v1.0.0
+        uses: ksatriow/action-mailer@v1
         with:
           smtp-server: ${{vars.SMTP_SERVER}}
           smtp-port: ${{vars.SMTP_PORT}}
