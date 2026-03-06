@@ -1,0 +1,10 @@
+name: Test and Build
+
+on: [workflow_dispatch]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Files
+        run: ls -a -l
