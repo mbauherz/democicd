@@ -5,6 +5,8 @@ on: [workflow_dispatch]
 jobs:
   demo:
     runs-on: ubuntu-latest
-    steps:
+    steps:      
+      - name: clone du proj ds le runner
+        uses: actions/checkout@v6
       - name: Check Files
         run: ls -a -l
